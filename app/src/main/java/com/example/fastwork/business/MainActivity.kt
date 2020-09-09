@@ -16,7 +16,7 @@ class MainActivity : BaseActivity() {
 
     override fun getLayoutId(): Int {
 
-        return 0
+        return 1
     }
 
     override fun initData() {
