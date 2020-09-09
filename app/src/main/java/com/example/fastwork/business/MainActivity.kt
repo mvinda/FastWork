@@ -8,30 +8,21 @@ import com.example.fastwork.utils.grant.PermissionsResultAction
 import java.security.Permissions
 
 class MainActivity : BaseActivity() {
-    override fun getLayoutId(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun initData() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun initView() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        PermissionsManager.instance.requestPermissionsIfNecessaryForResult(this,
-            arrayOf(android.Manifest.permission.ACCESS_WIFI_STATE), object : PermissionsResultAction() {
-                override fun onDenied(permission: String) {
-                }
-
-                override fun onGranted() {
-                }
-            })
     }
+
+    override fun getLayoutId(): Int {
+
+        return 0
+    }
+
+    override fun initData() {
+    }
+
+    override fun initView() {
+    }
+
 }
