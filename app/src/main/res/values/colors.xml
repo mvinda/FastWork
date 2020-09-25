@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="uikit_primary_color">#187CEA</color>
+    <color name="uikit_primary_color_light">#2C91FF</color>
+    <color name="uikit_primary_color_dark">#0069DB</color>
+
+    <color name="uikit_primary_gradient_start">#FF436EE4</color>
+    <color name="uikit_primary_gradient_end">#FF1DC8E8</color>
+
+    <color name="uikit_positive_color">#FF51C747</color>
+    <color name="uikit_positive_color_light">#FF74D66C</color>
+
+    <color name="uikit_warning_color">#FFFE984E</color>
+    <color name="uikit_warning_color_light">#FFFFA869</color>
+    <color name="uikti_origin_light">#FFFFB258</color>
+    <color name="uikit_primary_color_poster">#FFFFAD73</color>
+
+    <color name="uikit_primary_color_video">#FF876AFE</color>
+
+    <color name="uikit_negative_color">#FFD92029</color>
+    <color name="uikit_negative_color_light">#FFF75959</color>
+    <color name="uikit_red">#F34249</color>
+    <color name="uikit_red_light">#FFF7737A</color>
+
+    <color name="uikit_text_color1">#000000</color>
+    <color name="uikit_text_color2">#333333</color>
+    <color name="uikit_text_color3">#888888</color>
+    <color name="uikit_text_color4">#bbbbbb</color>
+    <color name="uikit_text_color5">#262626</color>
+    <color name="uikit_text_color6">#434343</color>
+    <color name="uikit_text_color7">#757575</color>
+    <color name="uikit_text_color8">#6B6B6B</color>
+    <color name="uikit_text_color_selected1">#FF489FFF</color>
+    <color name="uikit_text_color_unselected1">#FF929198</color>
+    <color name="uikit_text_color_unselected2">#FF9B9B9B</color>
+
+    <color name="uikit_title_color">@color/uikit_text_color1</color>
+    <color name="uikit_long_text_color">@color/uikit_text_color2</color>
+    <color name="uikit_sub_text_color">@color/uikit_text_color3</color>
+    <color name="uikit_desc_color">@color/uikit_text_color4</color>
+
+    <color name="uikit_placeholder_color">@color/uikit_text_color3</color>
+
+    <color name="uikit_bg_color">#F4F4F4</color>
+    <color name="uikit_line_color">#FFD5D5D5</color>
+    <color name="uikit_gray_color">#FFEDEDED</color>
+
+    <color name="uikit_btn_disabled_bg_color">#DDDDDD</color>
+    <color name="uikit_btn_disabled_text_color">@color/uikit_text_color4</color>
+    <color name="uikit_btn_normal_text_color">#FFFFFF</color>
+
+    <color name="uikit_border_btn_normal_bg_color">#00000000</color>
+    <color name="uikit_border_btn_normal_text_color">#FF007AFF</color>
+    <color name="uikit_border_btn_press_bg_color">#FFD9E5F3</color>
+    <color name="uikit_border_btn_press_text_color">#FF187CEA</color>
+    <color name="uikit_border_btn_disabled_text_color">@color/uikit_text_color4</color>
+
+    <color name="uikit_search_bg">#FFF0F2F5</color>
+
+    <color name="uikit_bg_gray">#FFF6F6F6</color>
+
+    <color name="uikit_text_unselect_bg_color">#FFE8E8E8</color>
+
+    <color name="uikit_item_press_color">#FFEEF5FC</color>
+
+    <color name="uikit_transparent">#00000000</color>
+    <color name="uikit_unable_color">#FFCDCDCD</color>
+    <color name="uikit_bg_normal_color">#F5F5F5</color>
+
+
 </resources>
