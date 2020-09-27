@@ -2,7 +2,8 @@ package com.example.fastwork.utils.value
 
 import android.app.ActivityManager
 import android.content.Context
-import com.example.fastwork.BuildConfig
+import android.support.multidex.BuildConfig
+import com.example.fastwork.utils.log.Lg
 
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -126,7 +127,7 @@ object ValueUtil {
         val start = stack.pop() ?: return 0f
         val use = (System.nanoTime() - start) / 1000000f
         if (msg != null) {
-            //            Lg.i("endTime", msg + " : " + use + "ms");
+                        Lg.i("endTime", msg + " : " + use + "ms");
         }
         if (stack.size == 0) {
             sTimes.set(null)
