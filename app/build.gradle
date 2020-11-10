@@ -15,7 +15,7 @@ android {
         multiDexEnabled true
         versionName "1.0"
         ndk {
-            abiFilters "armeabi"
+            abiFilters 'armeabi','armeabi-v7a','armeabi-v8a',"x86"
         }
     }
 
@@ -88,7 +88,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
-
     implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
     implementation 'com.tencent.bugly:nativecrashreport:latest.release'
 
