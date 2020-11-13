@@ -2,13 +2,12 @@ package com.example.fastwork.base
 
 import android.app.Activity
 import android.os.Bundle
-import android.util.Log
 import butterknife.ButterKnife
-import com.example.fastwork.business.splash.SplashPresenter
 
-abstract class BaseActivity : Activity() {
+abstract class BaseActivity<P : BasePresenter<*>> : Activity() {
     private var mIsTopActivity = false
-    open var mPresenter: SplashPresenter? = null
+
+    var mPresenter: P? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,8 +42,10 @@ abstract class BaseActivity : Activity() {
     override fun onDestroy() {
         super.onDestroy()
         if (mPresenter != null) {
+            mPresenter?.detachView()
             mPresenter = null
         }
+
     }
 
 

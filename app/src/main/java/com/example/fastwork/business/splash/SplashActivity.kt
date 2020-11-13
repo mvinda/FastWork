@@ -8,15 +8,17 @@ import com.example.fastwork.base.BaseActivity
 import com.example.fastwork.business.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 
-class SplashActivity : BaseActivity(), SplashContract.View {
+class SplashActivity : BaseActivity<SplashPresenter>(), SplashContract.View {
 
     override fun getLayoutId(): Int {
         return R.layout.activity_splash
     }
 
-    override var mPresenter: SplashPresenter? = SplashPresenter()
-
     override fun initView() {
+        if (mPresenter == null) {
+            mPresenter = SplashPresenter()
+        }
+
         splashImage.setOnClickListener { mPresenter?.onSplashImageClick() }
         splashJump.setOnClickListener { mPresenter?.onJumpClick() }
 
@@ -65,6 +67,11 @@ class SplashActivity : BaseActivity(), SplashContract.View {
 
     override fun startHome() {
         HomeActivity.open(this)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        finish()
     }
 
     override fun hideDialog() {

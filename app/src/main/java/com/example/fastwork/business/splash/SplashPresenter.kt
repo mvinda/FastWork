@@ -4,8 +4,9 @@ import android.os.CountDownTimer
 import com.example.fastwork.base.BasePresenter
 import com.example.fastwork.utils.log.Lg
 
-class SplashPresenter : BasePresenter(), SplashContract.Presenter {
+class SplashPresenter : BasePresenter<SplashContract.View>(), SplashContract.Presenter {
     private lateinit var mCountDown: SplashCountDown
+
 
     override fun init() {
         if (mView == null)
@@ -16,7 +17,6 @@ class SplashPresenter : BasePresenter(), SplashContract.Presenter {
     }
 
     override fun onSplashImageClick() {
-        Lg.d("whd", "66")
     }
 
     override fun onJumpClick() {
@@ -29,6 +29,7 @@ class SplashPresenter : BasePresenter(), SplashContract.Presenter {
 
         override fun onFinish() {
             mView?.startHome()
+
         }
 
         override fun onTick(millisUntilFinished: Long) {

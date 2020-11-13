@@ -1,9 +1,11 @@
 package com.example.fastwork.base
 
-import com.example.fastwork.business.splash.SplashContract
+import com.example.fastwork.utils.log.Lg
 
-open class BasePresenter : IBasePresenter {
-    var mView: SplashContract.View? = null
+
+open class BasePresenter<T : IBaseView> : IBasePresenter {
+    var mView: T? = null
+
 
     override fun detachView() {
         if (mView != null) {
@@ -11,7 +13,7 @@ open class BasePresenter : IBasePresenter {
         }
     }
 
-    override fun attachView(view: IBaseView) {
-        mView = view as SplashContract.View
+    fun attachView(view: T) {
+        mView = view
     }
 }
