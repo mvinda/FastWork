@@ -528,7 +528,8 @@
     <string name="maka_hot_recommended">热门搜索</string>
     <string name="maka_search_template_size">共搜索到%1$d个模板</string>
     <string name="maka_search_fail">很抱歉，没有找到你要的搜索结果\n
-                    你可以考虑：\n 检查拼写/使用较少关键词/使用其他关键词</string>
+        你可以考虑：\n 检查拼写/使用较少关键词/使用其他关键词
+    </string>
 
     <string name="maka_search_think">你可以考虑：检查拼写/使用较少关键词/使\n用其他关键词</string>
 
@@ -774,10 +775,16 @@
     <string name="text_according_to_sale">按销量</string>
     <string name="text_tone">色调</string>
     <string name="text_member_privilege">会员特权</string>
-    <string name="text_member_privilege_explain">1.免费会员模版：开通会员后，可以使用对应品类的会员模版，即右上角标有“会员免费”的模板。需注意，模版内的付费字体、图片、素材等内购项需另行购买，使用模板时会有提示。\n
-    2. 免费会员字体特权：高级会员专享，开通高级会员后，可以使用右上角带有“VIP”标识的会员字体。 \n3.尊贵标示：会员标示现已覆盖官网、手机APP（最新版本）等多个应用平台，随时随地彰显尊贵身份。点亮会员标示，就是这么不一样！ \n温馨提示：会员用户还可以加入MAKA用户尊享QQ群277637610，有什么疑问，可以联系小MA哥进行咨询哦~（工作时间：工作日9:00-19:00） </string>
+    <string name="text_member_privilege_explain">
+        1.免费会员模版：开通会员后，可以使用对应品类的会员模版，即右上角标有“会员免费”的模板。需注意，模版内的付费字体、图片、素材等内购项需另行购买，使用模板时会有提示。\n
+        2. 免费会员字体特权：高级会员专享，开通高级会员后，可以使用右上角带有“VIP”标识的会员字体。
+        \n3.尊贵标示：会员标示现已覆盖官网、手机APP（最新版本）等多个应用平台，随时随地彰显尊贵身份。点亮会员标示，就是这么不一样！
+        \n温馨提示：会员用户还可以加入MAKA用户尊享QQ群277637610，有什么疑问，可以联系小MA哥进行咨询哦~（工作时间：工作日9:00-19:00）
+    </string>
     <string name="text_member_subscribe_help">1 到期前一天为您自动续费；\n2 可随时取消自动续费服务，取消后不 再自动续费。</string>
-    <string name="text_member_try_des">免费试用为订阅模式，自动续费时间为离到期时间的24小时之内；若您打算取消订阅，可在到期时间24小时前取消。\n若要取消订阅模式请前往微信->我->钱包->支付中心->支付管理->自动扣费，并在其中取消订阅。</string>
+    <string name="text_member_try_des">
+        免费试用为订阅模式，自动续费时间为离到期时间的24小时之内；若您打算取消订阅，可在到期时间24小时前取消。\n若要取消订阅模式请前往微信->我->钱包->支付中心->支付管理->自动扣费，并在其中取消订阅。
+    </string>
     <!--<string name="text_member_try_remind">免费试用结束后会自动订阅%s服务，将续费%s元。\n您可随时取消自动续费服务，取消后不再自动续费。</string>-->
     <string name="text_purchase_member_success">开通成功</string>
     <string name="text_try_member_success">试用成功</string>

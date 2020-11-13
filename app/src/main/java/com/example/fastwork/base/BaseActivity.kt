@@ -1,16 +1,18 @@
 package com.example.fastwork.base
 
+import android.app.Activity
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import butterknife.ButterKnife
+import com.example.fastwork.business.splash.SplashPresenter
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : Activity() {
     private var mIsTopActivity = false
+    open var mPresenter: SplashPresenter? = null
 
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(getLayoutId())
         ButterKnife.bind(this)
         init()
@@ -36,6 +38,13 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         mIsTopActivity = false
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (mPresenter != null) {
+            mPresenter = null
+        }
     }
 
 

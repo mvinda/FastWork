@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/maka_bg_color_white">
+
+    <LinearLayout
+            android:id="@+id/ll_splash_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+            <ImageView
+                    android:id="@+id/iv_splash_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/douyin"/>
+
+
+            <TextView
+                    android:id="@+id/tv_splash_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_splash_icon"
+                    android:text="寻找志同道合的人"
+                    android:textColor="#FF333333"
+                    android:layout_centerVertical="true"
+                    android:textSize="12dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/splashImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_splash_bottom"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash"
+    />
+
+    <TextView
+            android:id="@+id/splashJump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/bg_splash_jump"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:textColor="#FFFFFFFF"
+            tools:text="跳过"/>
+
+</RelativeLayout>

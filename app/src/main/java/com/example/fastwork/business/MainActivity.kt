@@ -15,7 +15,6 @@ class MainActivity : BaseActivity() {
     }
 
     override fun getLayoutId(): Int {
-
         return 1
     }
 

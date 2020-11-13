@@ -7,10 +7,17 @@ import com.tencent.bugly.Bugly
 
 class MyApplication :Application(){
 
+    companion object {
+        fun getContext():Context{
+            return this.getContext();
+        }
+    }
+
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
         MultiDex.install(this)
         Bugly.init(applicationContext, "1199c47db5", false)
     }
+
 }
