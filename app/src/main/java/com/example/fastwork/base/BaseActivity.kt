@@ -24,6 +24,15 @@ abstract class BaseActivity<P : BasePresenter<*>> : Activity() {
         initData()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        if (mPresenter != null) {
+            mPresenter?.detachView()
+            mPresenter = null
+        }
+
+    }
+
     abstract fun initData()
 
     abstract fun initView()
@@ -39,14 +48,7 @@ abstract class BaseActivity<P : BasePresenter<*>> : Activity() {
         mIsTopActivity = false
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        if (mPresenter != null) {
-            mPresenter?.detachView()
-            mPresenter = null
-        }
 
-    }
 
 
 }
