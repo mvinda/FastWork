@@ -1,8 +1,9 @@
 package com.example.fastwork.base
 
-import java.util.*
 
 
 interface IBasePresenter {
+    fun attachView(view: IBaseView)
+
     fun detachView()
 }
