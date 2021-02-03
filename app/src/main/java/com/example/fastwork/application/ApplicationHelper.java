@@ -38,9 +38,4 @@ public enum ApplicationHelper {
         return mIApplication.getGson();
     }
 
-    public void startMainService() {
-        if (mIApplication != null) {
-            mIApplication.startMainService();
-        }
-    }
 }

@@ -47,8 +47,4 @@ abstract class BaseActivity<P : BasePresenter<*>> : Activity() {
         super.onPause()
         mIsTopActivity = false
     }
-
-
-
-
 }

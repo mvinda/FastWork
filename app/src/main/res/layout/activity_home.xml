@@ -13,8 +13,20 @@
 
     <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button"
+            android:id="@+id/btn_dialog"
             android:text="弹窗"/>
+
+
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_network"
+            android:text="网络"/>
+
+
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_webView"
+            android:text="webView框架测试"/>
 
 
 </LinearLayout>

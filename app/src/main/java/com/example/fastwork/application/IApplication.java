@@ -10,5 +10,4 @@ public interface IApplication {
 
     Gson getGson();
 
-    void startMainService();
 }

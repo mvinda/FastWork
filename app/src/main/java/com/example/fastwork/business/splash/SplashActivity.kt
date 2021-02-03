@@ -6,9 +6,13 @@ import com.bumptech.glide.Glide
 import com.example.fastwork.R
 import com.example.fastwork.base.BaseActivity
 import com.example.fastwork.business.home.HomeActivity
+import com.example.fastwork.http.HttpApi
+import com.example.fastwork.http.HttpUtils
 import kotlinx.android.synthetic.main.activity_splash.*
+import javax.inject.Inject
 
 class SplashActivity : BaseActivity<SplashPresenter>(), SplashContract.View {
+
 
     override fun getLayoutId(): Int {
         return R.layout.activity_splash
@@ -50,6 +54,10 @@ class SplashActivity : BaseActivity<SplashPresenter>(), SplashContract.View {
             }
 
         })
+
+
+//        val httpUtils = HttpUtils()
+//        val createApi = httpUtils.createApi(HttpApi::class.java).wangzhanzuo().compose(HttpTransformer<BaseDataModel<MarketWindowModel>, MarketWindowModel>());
 
     }
 
