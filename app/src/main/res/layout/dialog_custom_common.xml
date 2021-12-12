@@ -12,10 +12,10 @@
             style="@style/pagetitle_style"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/str_confirm_dialog_title" />
+            android:text="@string/str_confirm_dialog_title"/>
 
 
-    <TextView style="@style/pageline_style" />
+    <TextView style="@style/pageline_style"/>
 
 
     <TextView
@@ -28,11 +28,22 @@
             android:padding="20dp"
             android:text="内容"
             android:textColor="#FFF"
-            android:textSize="20sp" />
+            android:textSize="20sp"/>
+
+    <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_vertical"
+            android:hint="@string/str_debug_sn_input_title"
+            android:textAlignment="center"/>
 
 
-
-    <TextView style="@style/pageline_style" />
+    <TextView style="@style/pageline_style"/>
 
     <LinearLayout
             android:id="@+id/linearlayout_facmenu_dialogmenu_select"
@@ -50,7 +61,7 @@
                 android:gravity="center"
                 android:text="@string/str_textview_factory_dialogmenu_cancel"
                 android:textColor="#ffffff"
-                android:textSize="23dip" />
+                android:textSize="23dip"/>
 
         <Button
                 android:id="@+id/button2"
@@ -61,7 +72,7 @@
                 android:gravity="center"
                 android:text="@string/str_textview_factory_dialogmenu_confirm"
                 android:textColor="#ffffff"
-                android:textSize="23dip" />
+                android:textSize="23dip"/>
     </LinearLayout>
 
 

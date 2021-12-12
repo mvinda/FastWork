@@ -20,4 +20,29 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
+
+    <style name="pagetitle_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="pageline_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dip</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+
+    <style name="factory_menu_dialog_hint_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:textColor">#ffff00</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:padding">10dip</item>
+    </style>
 </resources>

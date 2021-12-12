@@ -3,7 +3,7 @@ package com.example.fastwork.utils.dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-
+import android.text.TextUtils;
 
 
 public class DialogUtil {
@@ -31,8 +31,8 @@ public class DialogUtil {
         }
     }
 
-    public CustomAlertDialog showAlertDialog(int title, int msg, int negative, int positive, final DialogInterface.OnClickListener negativeListener, final DialogInterface.OnClickListener positiveListener) {
-        CustomAlertDialog customAlertDialog = new CustomAlertDialog(mContext);
+    public CustomerAlterDialog showAlertDialog(String title, String msg, String negative, String positive, final DialogInterface.OnClickListener negativeListener, final DialogInterface.OnClickListener positiveListener) {
+        CustomerAlterDialog customAlertDialog = new CustomerAlterDialog(mContext);
         customAlertDialog.setTitle(title);
         customAlertDialog.setMessage(msg);
         customAlertDialog.setNegativeButton(negative, new DialogInterface.OnClickListener() {
@@ -54,25 +54,30 @@ public class DialogUtil {
         return customAlertDialog;
     }
 
-    public void showAlertDialog(String title, String msg, String negative, String positive, final DialogInterface.OnClickListener negativeListener, final DialogInterface.OnClickListener positiveListener) {
-        CustomAlertDialog customAlertDialog = new CustomAlertDialog(mContext);
-        customAlertDialog.setTitle(title);
-        customAlertDialog.setMessage(msg);
-        customAlertDialog.setNegativeButton(negative, new DialogInterface.OnClickListener() {
+
+    public CustomerInputDialog showInputDialog(String title, String msg, String negativeMessage, String positiveMessage, String hint, final DialogInterface.OnClickListener negativeListener, final CustomerInputDialog.InputDialogClickListener comfirmDialog) {
+        CustomerInputDialog inputDialog = new CustomerInputDialog(mContext);
+        if (!TextUtils.isEmpty(hint)) {
+            inputDialog.setHintText(hint);
+        }
+        inputDialog.setTitle(title);
+        inputDialog.setNegativeButton(negativeMessage, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (negativeListener != null)
-                    negativeListener.onClick(dialog, which);
+                negativeListener.onClick(dialog, which);
             }
         });
-        customAlertDialog.setPositiveButton(positive, new DialogInterface.OnClickListener() {
+
+        inputDialog.setPositiveButton(positiveMessage, new CustomerInputDialog.InputDialogClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                if (positiveListener != null) {
-                    positiveListener.onClick(dialog, which);
-                }
+            public void getMessage(CustomerInputDialog customerInputDialog, String message) {
+                comfirmDialog.getMessage(customerInputDialog,message);
             }
         });
-        customAlertDialog.show();
+
+
+        inputDialog.show();
+        return inputDialog;
     }
+
 }

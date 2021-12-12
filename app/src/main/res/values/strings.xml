@@ -834,4 +834,17 @@
     <string name="str_text_confirm">确认</string>
     <string name="str_text_cancel">取消</string>
 
+    <string name="str_confirm_dialog_title">title</string>
+
+
+    <string name="str_textview_factory_dialogmenu_cancel">Cancel</string>
+    <string name="str_textview_factory_dialogmenu_confirm">Confirm</string>
+
+
+    <string name="str_debug_sn_input_title">Please input hint</string>
+    <string name="str_debug_sn_input_cancel">Cancel</string>
+    <string name="str_debug_sn_input_confirm">Confirm</string>
+    <string name="str_debug_sn_input_confirm_again_tips">Please input same SN again</string>
+    <string name="str_debug_sn_input_not_match_tips">Not match previous SN, Please try again</string>
+
 </resources>

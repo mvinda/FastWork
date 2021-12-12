@@ -11,26 +11,24 @@ import com.example.fastwork.R;
 import com.example.fastwork.utils.value.ValueUtil;
 
 
-/**
- * Created by asia on 16/9/30.
- */
 
-public class CustomAlertDialog extends BaseDialog implements View.OnClickListener {
-    private TextView button1;
-    private TextView button2;
-    private TextView message;
-    private View closeIcon;
-    private TextView titleView;
+public abstract class BaseCustomerDialog extends BaseDialog implements View.OnClickListener {
+    protected TextView button1;
+    protected TextView button2;
+    protected TextView message;
+    protected TextView titleView;
 
-    private DialogInterface.OnClickListener mOnClickListener1;
-    private DialogInterface.OnClickListener mOnClickListener2;
+    protected DialogInterface.OnClickListener mOnClickListener1;
+    protected DialogInterface.OnClickListener mOnClickListener2;
 
-    public CustomAlertDialog(Context context) {
+    public BaseCustomerDialog(Context context) {
         super(context, R.style.dialog);
-        setContentView(R.layout.dialog_custom_alert);
+        setContentView(getLayoutId());
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         getWindow().getAttributes();
     }
+
+    protected abstract int getLayoutId();
 
     @Override
     public void onContentChanged() {
@@ -40,20 +38,23 @@ public class CustomAlertDialog extends BaseDialog implements View.OnClickListene
 
         titleView = (TextView) findViewById(R.id.title);
         message = (TextView) findViewById(R.id.message);
-        closeIcon = findViewById(R.id.buttonClose);
-        closeIcon.setOnClickListener(this);
+//        closeIcon = findViewById(R.id.buttonClose);
+//        closeIcon.setOnClickListener(this);
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         setNegativeButton(null, null);
         setPositiveButton(null, null);
+        initView();
     }
 
-    public CustomAlertDialog setMessage(String msg) {
+    protected abstract void initView();
+
+    public BaseCustomerDialog setMessage(String msg) {
         message.setText(msg);
         return this;
     }
 
-    public CustomAlertDialog setMessage(int msg) {
+    public BaseCustomerDialog setMessage(int msg) {
         message.setText(msg);
         return this;
     }
@@ -63,7 +64,12 @@ public class CustomAlertDialog extends BaseDialog implements View.OnClickListene
         titleView.setText(title);
     }
 
-    public CustomAlertDialog setNegativeButton(String text, DialogInterface.OnClickListener listener) {
+    public BaseCustomerDialog setDialogTitle(String titile) {
+        setTitle(titile);
+        return this;
+    }
+
+    public BaseCustomerDialog setNegativeButton(String text, DialogInterface.OnClickListener listener) {
         mOnClickListener1 = listener;
 
         if (TextUtils.isEmpty(text)) {
@@ -78,7 +84,7 @@ public class CustomAlertDialog extends BaseDialog implements View.OnClickListene
         return this;
     }
 
-    public CustomAlertDialog setPositiveButton(String text, DialogInterface.OnClickListener listener) {
+    public BaseCustomerDialog setPositiveButton(String text, DialogInterface.OnClickListener listener) {
         mOnClickListener2 = listener;
         if (TextUtils.isEmpty(text)) {
             button2.setVisibility(View.GONE);
@@ -90,7 +96,7 @@ public class CustomAlertDialog extends BaseDialog implements View.OnClickListene
         return this;
     }
 
-    private void layoutButtons() {
+    protected void layoutButtons() {
         if (button1.getVisibility() == View.VISIBLE) {
 
             LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) button1.getLayoutParams();
@@ -103,7 +109,7 @@ public class CustomAlertDialog extends BaseDialog implements View.OnClickListene
                 params.width = ViewGroup.LayoutParams.MATCH_PARENT;
             } else {
                 params.weight = 0;
-                params.width = ValueUtil.INSTANCE.dip2px(getContext(), 150);
+                params.width = ValueUtil.dip2px(getContext(), 150);
             }
 
         } else if (button2.getVisibility() == View.VISIBLE) {
@@ -113,29 +119,17 @@ public class CustomAlertDialog extends BaseDialog implements View.OnClickListene
         }
     }
 
-    public CustomAlertDialog setNegativeButton(int resId, DialogInterface.OnClickListener listener) {
-        if (resId == 0) return setNegativeButton(null, listener);
-        return setNegativeButton(getContext().getString(resId), listener);
-    }
-
-    public CustomAlertDialog setPositiveButton(int resId, DialogInterface.OnClickListener listener) {
-        if (resId == 0) {
-            return setPositiveButton(null, listener);
-        }
-        return setPositiveButton(getContext().getString(resId), listener);
-    }
 
 
     @Override
     public void onClick(View v) {
         if (v == button1 && mOnClickListener1 != null) {
-            mOnClickListener1.onClick(CustomAlertDialog.this, 1);
+            mOnClickListener1.onClick(BaseCustomerDialog.this, 1);
         } else if (v == button2 && mOnClickListener2 != null) {
-            mOnClickListener2.onClick(CustomAlertDialog.this, 2);
+            mOnClickListener2.onClick(BaseCustomerDialog.this, 2);
         }
 
-        if (v == button1 || v == closeIcon) cancel();
+        if (v == button1) cancel();
         else if (v == button2) dismiss();
-
     }
 }
